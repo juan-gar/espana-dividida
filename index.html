@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>España partida en dos</title>
+  <meta name="description" content="Lector web de «España partida en dos», de Julián Casanova: introducción y capítulos 1 a 4.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    try {
+      var t = localStorage.getItem('epd-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      var f = localStorage.getItem('epd-font');
+      if (f) document.documentElement.style.setProperty('--fs', f + 'px');
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress"></div></div>
+
+  <header class="topbar">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir índice" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <a class="brand" href="#" id="brand">España partida en dos</a>
+    <div class="topbar-title" id="topTitle"></div>
+    <div class="tools">
+      <button class="icon-btn" id="fontDown" aria-label="Reducir tamaño de letra">A<small>−</small></button>
+      <button class="icon-btn" id="fontUp" aria-label="Aumentar tamaño de letra">A<small>+</small></button>
+      <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="scrim" id="scrim"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Índice">
+    <div class="sidebar-head">
+      <div class="book-title">España partida en dos</div>
+      <div class="book-author">Julián Casanova</div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="searchInput" placeholder="Buscar en el texto…" autocomplete="off">
+      </label>
+    </div>
+    <nav id="toc" class="toc"></nav>
+    <div id="results" class="results" hidden></div>
+  </aside>
+
+  <main class="main" id="main">
+    <div id="view"></div>
+  </main>
+
+  <script src="assets/book.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
